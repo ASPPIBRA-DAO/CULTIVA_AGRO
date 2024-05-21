@@ -11,7 +11,23 @@ web 3. With this, we want to accelerate land regularization, offering financial 
 
 # CULTIVA_AGRO
 
-## ETH Global HackFs 2024
+We are excited to announce our participation in ETHGlobal HackFS 2024, developing the **Cultiva Agro** application. Our goal is to integrate advanced technologies such as Filecoin, FVM, Squid and Lit Protocol to create an innovative platform for rural producers.
+
+## Technologies Used
+
+- **Filecoin & FVM:** Decentralized storage and programmability.
+- **Squid:** Cross-chain asset exchange.
+- **Lit Protocol:** Key management and private computing.
+
+## Our mission
+
+Transform the digital and financial inclusion of rural producers, promoting a sustainable and efficient future in the agribusiness sector.
+
+Check out more about the technologies we are using:
+
+- [Filecoin](https://www.filecoin.io/)
+- [Squid](https://www.squidrouter.com/)
+- [Lit Protocol](https://www.litprotocol.com/)
 
 ## <img src="https://img.icons8.com/nolan/25/computer.png"/> Connect with me
 
