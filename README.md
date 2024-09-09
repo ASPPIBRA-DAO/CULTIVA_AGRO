@@ -29,6 +29,36 @@ Check out more about the technologies we are using:
 - [Squid](https://www.squidrouter.com/)
 - [Lit Protocol](https://www.litprotocol.com/)
 
+### Rodando o projeto
+
+- siga os seguintes passos no seu terminal:
+
+1. Inicialize um ambiente virtual:
+
+    `python3 -m venv venv`
+
+2. Ative o ambiente (_Windows / Linux_):
+
+    `venv/Sacripts/activate`
+
+    `venv/bin/activate`
+
+3. Instale as dependências do projeto:
+
+    `python3 -m pip install -r requirements.txt`
+
+4. Rode o projeto:
+
+    `python3 index.py`
+
+5. Acesse em seu navegador através dos endereços:
+
+    `http://localhost:8050/`
+    `http://127.0.0.1:8050/`
+
+<https://developers.google.com/maps/documentation/geocoding>
+<https://account.mapbox.com>
+
 ## <img src="https://img.icons8.com/nolan/25/computer.png"/> Connect with me
 
 [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/company/asppibra-dao/)
