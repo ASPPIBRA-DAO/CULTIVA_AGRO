@@ -76,7 +76,6 @@ for address in df_data["ADDRESS"].unique():
     c += 1
     print(c, total)
 
-# ===================================
 # Tratamento final
 # Atualiza o dicionário de endereços com as coordenadas
 # (não é necessário fazer isso novamente, pois já foi feito acima)
