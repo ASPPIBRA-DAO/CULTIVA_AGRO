@@ -49,12 +49,7 @@ controllers = dbc.Row([
     # Logotipo do dashboard
     html.Img(id="logo", src=app.get_asset_url("logo_dark.png"), style={'width': '50%'}),
 
-    # Título do dashboard
-    html.H3("Monitoramento do Agronegócio no Brasil", style={"margin-top": "30px"}),
-
-    # Descrição do uso do dashboard
-    html.P("Utilize este dashboard para analisar a produção agrícola e pecuária nos estados brasileiros."),
-
+    
     # Título da seção de seleção de estados
     html.H4("Estados", style={"margin-top": "50px", "margin-bottom": "50px"}),
 
@@ -87,26 +82,29 @@ controllers = dbc.Row([
         id="dropdown-color"  # ID do componente
     )
 ],
+        
+    
     
     # Estilização da barra lateral
+    
     style={
-        'padding': '20px',  # Espaçamento interno para os componentes
-        'border': '1px solid rgba(255, 255, 255, 0.3)',  # Borda sutil e semi-transparente
-        'box-shadow': '0 4px 30px rgba(0, 0, 0, 0.1)',  # Sombra leve para efeito de profundidade
-        'border-radius': '12px',  # Cantos arredondados mais pronunciados
-        'background': 'rgba(255, 255, 255, 0.1)',  # Fundo semi-transparente para o efeito vidro
-        'backdrop-filter': 'blur(10px)',  # Filtro de desfoque para o efeito de vidro
-        '-webkit-backdrop-filter': 'blur(10px)',  # Compatibilidade com navegadores baseados em Webkit
+        'padding': '0',  # Removendo o espaçamento interno
+        'margin': '0',  # Removendo qualquer margem externa
+        'border': '1px solid rgba(255, 255, 255, 0.3)',  # Borda semi-transparente
+        'box-shadow': '0 4px 30px rgba(0, 0, 0, 0.1)',  # Sombra leve para profundidade
+        'border-radius': '15px',  # Bordas arredondadas de 15px
+        'background': 'rgba(255, 255, 255, 0.1)',  # Fundo semi-transparente
+        'backdrop-filter': 'blur(10px)',  # Efeito de desfoque
+        '-webkit-backdrop-filter': 'blur(10px)',  # Compatibilidade Webkit
         'width': '20%',  # Largura da barra lateral
         'max-width': '300px',  # Largura máxima
         'min-width': '300px',  # Largura mínima
-        'height': '100vh',  # Altura completa da viewport (tela)
-        'display': 'flex',  # Uso de flexbox para disposição dos itens
-        'flex-direction': 'column',  # Organiza os itens verticalmente
-        'overflow-y': 'auto',  # Habilita a rolagem vertical se o conteúdo exceder a altura
-        'margin': '0px',  # Afastamento das bordas externas para dar espaço ao redor da barra
-        'padding': '30px',  # Aumenta o espaçamento interno entre os componentes
-    }
+        'height': '100vh',  # Altura completa da tela
+        'position': 'fixed',  # Fixa a barra lateral na esquerda e topo
+        'top': '0',  # Barra colada no topo
+        'left': '0',  # Barra colada na lateral esquerda
+        'overflow-y': 'auto',  # Habilita rolagem vertical
+    }   
 )
 
 # Layout principal do dashboard
