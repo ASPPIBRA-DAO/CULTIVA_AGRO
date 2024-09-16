@@ -14,7 +14,7 @@ fig.update_layout(
 hist = dbc.Row(
     [dcc.Graph(id="hist-graph", figure=fig)],  # Componente do gráfico
     style={
-        "height": "20vh",  # Define a altura do gráfico
+        "height": "30vh",  # Define a altura do gráfico
         "padding": "20px",  # Espaçamento interno
         "border": "1px solid rgba(255, 255, 255, 0.3)",  # Borda sutil com transparência
         "box-shadow": "0 4px 30px rgba(0, 0, 0, 0.1)",  # Sombra leve para profundidade

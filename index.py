@@ -95,7 +95,7 @@ def update_hist(location, square_size, color_map):
         color=color_map,
         size="size_m2",
         size_max=20,
-        zoom=10,
+        zoom=9,
         opacity=0.4
     )
 

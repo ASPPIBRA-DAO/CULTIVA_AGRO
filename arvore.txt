@@ -1,0 +1,27 @@
+.
+├── app.py
+├── arvore_do_projeto.txt
+├── arvore_filtrada.txt
+├── _controllers.py
+├── data_treatment.py
+├── dict_notes.json
+├── Doc_API_Agro
+│   ├── agritec.pdf
+│   ├── bioinsumos.pdf
+│   ├── climapi.pdf
+│   ├── satveg.pdf
+│   └── smartsolos-expert.pdf
+├── _histogram.py
+├── index.py
+├── LICENSE.md
+├── loja.py
+├── _map.py
+├── __pycache__
+│   ├── app.cpython-310.pyc
+│   ├── _controllers.cpython-310.pyc
+│   ├── _histogram.cpython-310.pyc
+│   └── _map.cpython-310.pyc
+├── README.md
+└── requirements.txt
+
+2 directories, 22 files
