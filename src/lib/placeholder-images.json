@@ -9,7 +9,7 @@
     {
       "id": "project-soybean",
       "description": "A close-up shot of healthy soybean plants in a field.",
-      "imageUrl": "https://images.unsplash.com/photo-1562702076-c719c8796b8d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzb3liZWFuJTIwZmllbGR8ZW58MHx8fHwxNzYyMjI0Nzg2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1562702076-c719c8796b8d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzb3liZWFuJTIwZmllbGR8ZW58MHx8fHwxNzYyMjI0Nzg2fDA&ixlibrb-4.1.0&q=80&w=1080",
       "imageHint": "soybean field"
     },
     {
@@ -27,25 +27,25 @@
     {
       "id": "project-corn",
       "description": "A vast field of mature corn under a blue sky.",
-      "imageUrl": "https://images.unsplash.com/photo-1504788576473-fa4b594356a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjb3JuJTIwZmllbGR8ZW58MHx8fHwxNzYyMTk2MjQ1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1504788576473-fa4b594356a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjb3JuJTIwZmllbGR8ZW58MHx8fHwxNzYyMTk2MjQ1fDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "corn field"
     },
     {
       "id": "project-avocado",
       "description": "An avocado orchard with trees full of ripe avocados.",
-      "imageUrl": "https://images.unsplash.com/photo-1721730233728-dae2baa8bd74?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxhdm9jYWRvJTIwb3JjaGFyZHxlbnwwfHx8fDE3NjIyMjQ3ODZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1721730233728-dae2baa8bd74?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxhdm9jYWRvJTIwb3JjaGFyZHxlbnwwfHx8fDE3NjIyMjQ3ODZ8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "avocado orchard"
     },
     {
       "id": "project-grapes",
       "description": "A vineyard with rows of grapevines, hinting at wine production.",
-      "imageUrl": "https://images.unsplash.com/photo-1712560357606-5696232746a5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx2aW5leWFyZCUyMGdyYXBlc3xlbnwwfHx8fDE3NjIyMjQ3ODZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1712560357606-5696232746a5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx2aW5leWFyZCUyMGdyYXBlc3xlbnwwfHx8fDE3NjIyMjQ3ODZ8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "vineyard grapes"
     },
     {
       "id": "profile-avatar-1",
       "description": "A placeholder avatar for a user profile.",
-      "imageUrl": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjIxODcyNzB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjIxODcyNzB8MA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "person portrait"
     }
   ]
