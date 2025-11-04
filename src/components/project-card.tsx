@@ -36,11 +36,6 @@ export function ProjectCard({ project }: ProjectCardProps) {
               data-ai-hint={image.imageHint}
             />
           )}
-           <div className="absolute top-2 left-2">
-            <Badge variant="outline" className="bg-background/80 backdrop-blur-sm">
-                <TrendingUp className="mr-1 h-3 w-3 text-primary" /> {project.marketPrice}
-            </Badge>
-          </div>
           <div className="absolute top-2 right-2">
             <Badge variant={project.riskLevel === 'A' ? 'default' : project.riskLevel === 'B' ? 'secondary' : 'destructive'}>
                 Risk {project.riskLevel}
@@ -49,7 +44,12 @@ export function ProjectCard({ project }: ProjectCardProps) {
         </div>
       </Link>
       <CardHeader>
-        <Badge variant="secondary" className="w-fit mb-2">{project.cropType}</Badge>
+        <div className="flex justify-between items-center mb-2">
+            <Badge variant="secondary" className="w-fit">{project.cropType}</Badge>
+            <Badge variant="outline" className="bg-background/80 backdrop-blur-sm">
+                <TrendingUp className="mr-1 h-3 w-3 text-primary" /> {project.marketPrice}
+            </Badge>
+        </div>
         <CardTitle className="font-headline text-2xl h-16">
           <Link href={`/projects/${project.id}`}>{project.title}</Link>
         </CardTitle>
