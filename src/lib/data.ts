@@ -13,6 +13,7 @@ export type Project = {
   riskLevel: 'A' | 'B' | 'C';
   investmentType: string;
   guarantee: string;
+  marketPrice: string;
 };
 
 export const projects: Project[] = [
@@ -30,7 +31,8 @@ export const projects: Project[] = [
     term: "24 Months",
     riskLevel: "B",
     investmentType: "P2P Lending",
-    guarantee: "CPR Física"
+    guarantee: "CPR Física",
+    marketPrice: "R$ 150,00/sc"
   },
   {
     id: "proj-002",
@@ -46,7 +48,8 @@ export const projects: Project[] = [
     term: "12 Months",
     riskLevel: "A",
     investmentType: "P2P Lending",
-    guarantee: "Harvest Alienation"
+    guarantee: "Harvest Alienation",
+    marketPrice: "R$ 1.200,00/sc"
   },
   {
     id: "proj-003",
@@ -62,7 +65,8 @@ export const projects: Project[] = [
     term: "36+ Months",
     riskLevel: "C",
     investmentType: "Equity Crowdfunding",
-    guarantee: "Company Shares"
+    guarantee: "Company Shares",
+    marketPrice: "N/A"
   },
   {
     id: "proj-004",
@@ -78,7 +82,8 @@ export const projects: Project[] = [
     term: "10 Months",
     riskLevel: "B",
     investmentType: "P2P Lending",
-    guarantee: "CPR Física"
+    guarantee: "CPR Física",
+    marketPrice: "R$ 60,00/sc"
   },
   {
     id: "proj-005",
@@ -94,7 +99,8 @@ export const projects: Project[] = [
     term: "30 Months",
     riskLevel: "B",
     investmentType: "P2P Lending",
-    guarantee: "Land Mortgage"
+    guarantee: "Land Mortgage",
+    marketPrice: "R$ 8,00/kg"
   },
   {
     id: "proj-006",
@@ -110,7 +116,8 @@ export const projects: Project[] = [
     term: "48+ Months",
     riskLevel: "C",
     investmentType: "Equity Crowdfunding",
-    guarantee: "Company Shares"
+    guarantee: "Company Shares",
+    marketPrice: "N/A"
   },
 ];
 

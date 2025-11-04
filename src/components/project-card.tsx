@@ -13,7 +13,7 @@ import { Progress } from "@/components/ui/progress";
 import { Button } from "@/components/ui/button";
 import type { Project } from "@/lib/data";
 import { placeholderImages } from "@/lib/placeholder-images.json";
-import { Calendar, Percent } from "lucide-react";
+import { Calendar, Percent, TrendingUp } from "lucide-react";
 
 interface ProjectCardProps {
   project: Project;
@@ -36,6 +36,11 @@ export function ProjectCard({ project }: ProjectCardProps) {
               data-ai-hint={image.imageHint}
             />
           )}
+           <div className="absolute top-2 left-2">
+            <Badge variant="outline" className="bg-background/80 backdrop-blur-sm">
+                <TrendingUp className="mr-1 h-3 w-3 text-primary" /> {project.marketPrice}
+            </Badge>
+          </div>
           <div className="absolute top-2 right-2">
             <Badge variant={project.riskLevel === 'A' ? 'default' : project.riskLevel === 'B' ? 'secondary' : 'destructive'}>
                 Risk {project.riskLevel}
