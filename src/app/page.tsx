@@ -6,9 +6,14 @@ import Link from "next/link";
 import { Leaf, DollarSign, LineChart } from "lucide-react";
 import Image from "next/image";
 import { placeholderImages } from "@/lib/placeholder-images.json";
+import { getMarketPrices } from "@/lib/market-data";
 
-export default function Home() {
+export default async function Home() {
   const heroImage = placeholderImages.find(p => p.id === "hero-image");
+
+  const featuredProjects = projects.slice(0, 3);
+  const cropTypes = featuredProjects.map(p => p.cropType);
+  const marketPrices = await getMarketPrices(cropTypes);
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -82,8 +87,12 @@ export default function Home() {
           className="text-center"
         />
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.slice(0, 3).map((project) => (
-            <ProjectCard key={project.id} project={project} />
+          {featuredProjects.map((project) => (
+            <ProjectCard 
+              key={project.id} 
+              project={project}
+              marketPrice={marketPrices.get(project.cropType)}
+            />
           ))}
         </div>
         <div className="text-center mt-12">

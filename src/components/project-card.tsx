@@ -17,9 +17,10 @@ import { Calendar, Percent, TrendingUp } from "lucide-react";
 
 interface ProjectCardProps {
   project: Project;
+  marketPrice?: string | null;
 }
 
-export function ProjectCard({ project }: ProjectCardProps) {
+export function ProjectCard({ project, marketPrice }: ProjectCardProps) {
   const image = placeholderImages.find(p => p.id === project.imageId);
   const progress = (project.amountRaised / project.targetAmount) * 100;
 
@@ -46,9 +47,11 @@ export function ProjectCard({ project }: ProjectCardProps) {
       <CardHeader>
         <div className="flex justify-between items-center mb-2">
             <Badge variant="secondary" className="w-fit">{project.cropType}</Badge>
-            <Badge variant="outline" className="bg-background/80 backdrop-blur-sm">
-                <TrendingUp className="mr-1 h-3 w-3 text-primary" /> {project.marketPrice}
-            </Badge>
+            {marketPrice && (
+              <Badge variant="outline" className="bg-background/80 backdrop-blur-sm">
+                  <TrendingUp className="mr-1 h-3 w-3 text-primary" /> {marketPrice}
+              </Badge>
+            )}
         </div>
         <CardTitle className="font-headline text-2xl h-16">
           <Link href={`/projects/${project.id}`}>{project.title}</Link>

@@ -8,11 +8,15 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
+import { getMarketPrices } from "@/lib/market-data";
 
-export default function ProjectsPage() {
+export default async function ProjectsPage() {
   // Filtering logic would be implemented here using state for a real app
   const allCropTypes = ["All", ...new Set(projects.map((p) => p.cropType))];
+
+  const cropTypes = projects.map(p => p.cropType);
+  const marketPrices = await getMarketPrices(cropTypes);
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -50,7 +54,11 @@ export default function ProjectsPage() {
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
+          <ProjectCard 
+            key={project.id} 
+            project={project} 
+            marketPrice={marketPrices.get(project.cropType)}
+          />
         ))}
       </div>
     </div>
