@@ -1,3 +1,4 @@
+
 export type Project = {
   id: string;
   title: string;
@@ -50,11 +51,11 @@ export const projects: Project[] = [
   },
   {
     id: "proj-003",
-    title: "Urban Hydroponics Farm",
-    shortDescription: "Equity investment in a new vertical hydroponics farm in São Paulo.",
-    longDescription: "Seeking equity partners for a state-of-the-art hydroponics farm to supply fresh greens to restaurants and retailers in São Paulo. This is a high-tech project with experienced agronomists and a solid business plan targeting a premium market. This is an equity crowdfunding opportunity, offering a share in the company's future profits.",
-    cropType: "Hydroponics",
-    imageId: "project-hydroponics",
+    title: "Sustainable Cocoa Farming",
+    shortDescription: "Equity investment in a sustainable cocoa farm in Bahia.",
+    longDescription: "Seeking equity partners for a state-of-the-art sustainable cocoa farm to supply high-quality beans to premium chocolate makers. This is an equity crowdfunding opportunity, offering a share in the company's future profits.",
+    cropType: "Cocoa",
+    imageId: "project-cocoa",
     targetAmount: 1200000,
     amountRaised: 450000,
     daysLeft: 58,

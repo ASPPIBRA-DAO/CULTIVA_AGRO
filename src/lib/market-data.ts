@@ -1,9 +1,11 @@
+
 import 'server-only';
 
 const CROP_TO_SYMBOL_MAP: Record<string, string> = {
   "Soybean": "ZS",
   "Coffee": "KC",
   "Corn": "ZC",
+  "Cocoa": "CC",
   // Avocado and Grapes are not standardly traded commodities with simple tickers.
   // We can add specific futures contracts if needed. For now, they won't fetch a price.
 };

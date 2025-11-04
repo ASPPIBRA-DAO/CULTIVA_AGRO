@@ -19,10 +19,10 @@
       "imageHint": "coffee beans"
     },
     {
-      "id": "project-hydroponics",
-      "description": "A modern hydroponics farm with rows of green lettuce under grow lights.",
-      "imageUrl": "https://images.unsplash.com/photo-1668962225017-12ef9d7981c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxoeWRyb3BvbmljcyUyMGZhcm18ZW58MHx8fHwxNzYyMjI0Nzg2fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "hydroponics farm"
+      "id": "project-cocoa",
+      "description": "Ripe cocoa pods growing on a tree.",
+      "imageUrl": "https://images.unsplash.com/photo-1579705294245-83585141c2c3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjYWNhbyUyMHBvZHN8ZW58MHx8fHwxNzYyMjI0NzgzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cacao pods"
     },
     {
       "id": "project-corn",
