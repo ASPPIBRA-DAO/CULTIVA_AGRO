@@ -1,4 +1,14 @@
 
+export type Company = {
+  id: string;
+  name: string;
+  logoId: string;
+  bio: string;
+  location: string;
+  foundedYear: number;
+  website: string;
+};
+
 export type Project = {
   id: string;
   title: string;
@@ -14,7 +24,38 @@ export type Project = {
   riskLevel: 'A' | 'B' | 'C';
   investmentType: string;
   guarantee: string;
+  company: Company;
 };
+
+const fazendaSolar: Company = {
+    id: "comp-001",
+    name: "Fazenda Solar Orgânicos",
+    logoId: "logo-fazenda-solar",
+    bio: "A Fazenda Solar é uma empresa familiar com 15 anos de experiência em agricultura orgânica. Nosso foco é a produção de soja e milho orgânico certificado, utilizando práticas sustentáveis que respeitam o meio ambiente e garantem a alta qualidade dos nossos produtos. Estamos comprometidos com a inovação e a expansão de nossas operações de forma responsável.",
+    location: "Paraná, Brasil",
+    foundedYear: 2009,
+    website: "www.fazendasolar.com.br"
+}
+
+const cafeDasMontanhas: Company = {
+    id: "comp-002",
+    name: "Café das Montanhas",
+    logoId: "logo-cafe-montanhas",
+    bio: "Especialistas em cafés de alta pontuação, o Café das Montanhas controla todo o processo, da colheita à torra. Nossos grãos são cultivados nas altas altitudes de Minas Gerais, resultando em uma bebida com sabor e aroma únicos, reconhecida por compradores internacionais.",
+    location: "Minas Gerais, Brasil",
+    foundedYear: 2015,
+    website: "www.cafedasmontanhas.com"
+}
+
+const cacauBahia: Company = {
+    id: "comp-003",
+    name: "Cacau Bahia Sustentável",
+    logoId: "logo-cacau-bahia",
+    bio: "Somos uma startup de agronegócio focada na produção de cacau fino e sustentável no sul da Bahia. Buscamos parceiros para crescer e fornecer amêndoas de alta qualidade para o mercado de chocolates premium, gerando impacto social e ambiental positivo na região.",
+    location: "Bahia, Brasil",
+    foundedYear: 2020,
+    website: "www.cacaubahia.com"
+}
 
 export const projects: Project[] = [
   {
@@ -32,6 +73,7 @@ export const projects: Project[] = [
     riskLevel: "B",
     investmentType: "P2P Lending",
     guarantee: "CPR Física",
+    company: fazendaSolar,
   },
   {
     id: "proj-002",
@@ -48,6 +90,7 @@ export const projects: Project[] = [
     riskLevel: "A",
     investmentType: "P2P Lending",
     guarantee: "Harvest Alienation",
+    company: cafeDasMontanhas,
   },
   {
     id: "proj-003",
@@ -64,6 +107,7 @@ export const projects: Project[] = [
     riskLevel: "C",
     investmentType: "Equity Crowdfunding",
     guarantee: "Company Shares",
+    company: cacauBahia,
   },
   {
     id: "proj-004",
@@ -80,6 +124,7 @@ export const projects: Project[] = [
     riskLevel: "B",
     investmentType: "P2P Lending",
     guarantee: "CPR Física",
+    company: fazendaSolar, // Re-using for variety
   },
   {
     id: "proj-005",
@@ -96,6 +141,7 @@ export const projects: Project[] = [
     riskLevel: "B",
     investmentType: "P2P Lending",
     guarantee: "Land Mortgage",
+    company: cafeDasMontanhas, // Re-using for variety
   },
   {
     id: "proj-006",
@@ -112,6 +158,7 @@ export const projects: Project[] = [
     riskLevel: "C",
     investmentType: "Equity Crowdfunding",
     guarantee: "Company Shares",
+    company: cacauBahia, // Re-using for variety
   },
 ];
 
@@ -150,3 +197,9 @@ export const myInvestments = [
         maturityDate: new Date("2023-08-20"),
     }
 ]
+
+// Function to get a company by its ID
+export function getCompanyById(id: string) {
+    const allCompanies = [fazendaSolar, cafeDasMontanhas, cacauBahia];
+    return allCompanies.find(c => c.id === id);
+}

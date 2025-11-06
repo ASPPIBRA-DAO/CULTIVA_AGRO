@@ -1,6 +1,8 @@
+
 import { projects } from "@/lib/data";
 import { notFound } from "next/navigation";
 import Image from "next/image";
+import Link from "next/link";
 import {
   Card,
   CardContent,
@@ -8,6 +10,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { Button } from "@/components/ui/button";
@@ -20,7 +23,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { ShieldCheck, Calendar, Percent, Target, FileText } from "lucide-react";
+import { ShieldCheck, Calendar, Percent, Target, FileText, ArrowRight } from "lucide-react";
 
 export default function ProjectDetailPage({ params }: { params: { id: string } }) {
   const project = projects.find((p) => p.id === params.id);
@@ -77,6 +80,24 @@ export default function ProjectDetailPage({ params }: { params: { id: string } }
               </div>
               
               <Separator className="my-6" />
+
+                <Card className="bg-background/50 mb-6">
+                    <CardContent className="p-4">
+                       <Link href={`/company/${project.company.id}`} className="flex items-center justify-between group">
+                            <div className="flex items-center space-x-4">
+                                <Avatar>
+                                    <AvatarImage src={`/images/${project.company.logoId}.png`} alt={`${project.company.name} logo`} />
+                                    <AvatarFallback>{project.company.name.charAt(0)}</AvatarFallback>
+                                </Avatar>
+                                <div>
+                                    <p className="text-sm text-muted-foreground">Projeto de</p>
+                                    <p className="font-bold text-lg group-hover:underline">{project.company.name}</p>
+                                </div>
+                            </div>
+                            <ArrowRight className="h-6 w-6 text-muted-foreground group-hover:translate-x-1 transition-transform"/>
+                       </Link>
+                    </CardContent>
+                </Card>
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center mb-6">
                 <div className="bg-card p-4 rounded-lg">

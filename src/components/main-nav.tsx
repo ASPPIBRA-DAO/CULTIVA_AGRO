@@ -21,6 +21,12 @@ export function MainNav({
           Projects
         </Link>
         <Link
+          href="/marketplace"
+          className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+        >
+          Marketplace
+        </Link>
+        <Link
           href="/dashboard"
           className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
         >
