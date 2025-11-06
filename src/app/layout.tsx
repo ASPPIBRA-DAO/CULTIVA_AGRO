@@ -6,8 +6,8 @@ import { SiteHeader } from '@/components/site-header';
 import { SiteFooter } from '@/components/site-footer';
 
 export const metadata: Metadata = {
-  title: 'AgriVest Connect',
-  description: 'Connecting investors with agricultural opportunities.',
+  title: 'Cultiva Agro',
+  description: 'Conectando investidores a oportunidades no agronegócio.',
 };
 
 export default function RootLayout({

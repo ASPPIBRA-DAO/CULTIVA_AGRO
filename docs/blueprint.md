@@ -1,22 +1,43 @@
-# **App Name**: AgriVest Connect
+# **App Name**: Cultiva Agro
 
 ## Core Features:
 
-- Investor Onboarding (KYC): Secure investor registration and identity verification (CPF, ID, Proof of Life) integrated with background check APIs.
-- Project Showcase: Display agricultural projects seeking funding with filters for risk, return, and crop type.
-- Investment Simulator: Allow investors to simulate potential returns based on investment amount and project parameters.
-- Automated Contract Generation: Automatically generate investment contracts (Mútuo or CIC) with investor and project details.
-- Secure Digital Signature: Integrate with digital signature platforms to formalize investment contracts electronically.
-- Escrow Account Integration: Integrate with payment institutions or escrow accounts for secure fund management and automatic refunds if project goals aren't met.
-- Risk Profiling Tool: Generative AI powered tool assesses the risk profiles of potential projects to ensure the listings that users invest in align with their risk tolerance. 
+*   **Project Marketplace:** Browse, filter, and search for agricultural investment opportunities. Each project will have a detailed page with information about the project, the company behind it, financial projections, and risk analysis.
+*   **User Dashboard:** After logging in, users can view their investment portfolio, track the performance of their investments, and see upcoming payment schedules.
+*   **Company Profiles:** Detailed profiles of the agricultural companies seeking funding. This will include their history, team, and track record.
+*   **Investment Flow:** A secure and streamlined process for users to invest in projects.
+*   **Admin Panel:** A backend system for admins to manage projects, users, and content on the platform.
 
-## Style Guidelines:
+## Tech Stack:
 
-- Primary color: Earthy Green (#6B8E23) to reflect agriculture and growth.
-- Background color: Light Beige (#F5F5DC) to provide a neutral and calming backdrop.
-- Accent color: Warm Gold (#D4A27A) to symbolize investment and value.
-- Headline font: 'Playfair', serif, for an elegant, high-end feel.
-- Body font: 'PT Sans', sans-serif, for a clean, readable style that pairs well with 'Playfair'.
-- Use clear and professional icons related to agriculture, finance, and investment.
-- A clean, card-based layout for project listings. Prioritize key data (ROI, risk level) prominently.
-- Subtle progress bar animations to visualize fundraising progress.
+*   **Framework:** Next.js (React)
+*   **Styling:** Tailwind CSS
+*   **UI Components:** shadcn/ui
+*   **Authentication:** NextAuth.js
+*   **Database:** PostgreSQL (using Vercel Postgres)
+*   **ORM:** Drizzle ORM
+*   **Charts:** Recharts
+
+## Pages:
+
+*   `/` - Landing Page / Homepage
+*   `/marketplace` - Project Marketplace
+*   `/project/[id]` - Detailed Project Page
+*   `/company/[id]` - Detailed Company Page
+*   `/dashboard` - User Dashboard
+*   `/login` - Login Page
+*   `/signup` - Signup Page
+
+## Data Models (Schemas):
+
+*   **User:** id, name, email, password, image, createdAt
+*   **Project:** id, title, description, companyId, targetAmount, amountRaised, closingDate, expectedROI, riskRating, images
+*   **Investment:** id, userId, projectId, amount, investmentDate
+*   **Company:** id, name, description, logo, website, location, foundingYear
+
+## Roadmap (Future Features):
+
+*   Secondary market for trading investments.
+*   Social features (comments, Q&A on projects).
+*   More detailed analytics and reporting for investors.
+*   Integration with digital wallets.
