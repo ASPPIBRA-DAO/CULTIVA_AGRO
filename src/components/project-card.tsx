@@ -26,7 +26,7 @@ export function ProjectCard({ project, marketPrice }: ProjectCardProps) {
 
   return (
     <Card className="flex flex-col overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-      <Link href={`/projects/${project.id}`} className="block">
+      <Link href={`/marketplace/${project.id}`} className="block">
         <div className="relative w-full h-48">
           {image && (
             <Image
@@ -54,7 +54,7 @@ export function ProjectCard({ project, marketPrice }: ProjectCardProps) {
             )}
         </div>
         <CardTitle className="font-headline text-2xl h-16">
-          <Link href={`/projects/${project.id}`}>{project.title}</Link>
+          <Link href={`/marketplace/${project.id}`}>{project.title}</Link>
         </CardTitle>
         <CardDescription className="h-10">{project.shortDescription}</CardDescription>
       </CardHeader>
@@ -83,7 +83,7 @@ export function ProjectCard({ project, marketPrice }: ProjectCardProps) {
       </CardContent>
       <CardFooter>
         <Button asChild className="w-full">
-          <Link href={`/projects/${project.id}`}>View Details</Link>
+          <Link href={`/marketplace/${project.id}`}>View Details</Link>
         </Button>
       </CardFooter>
     </Card>
