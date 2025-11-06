@@ -33,10 +33,10 @@ export function MainNav({
           Dashboard
         </Link>
         <Link
-          href="/admin/risk-assessment"
+          href="/company/comp-001"
           className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
         >
-          Risk Assessor
+          Company Profile
         </Link>
       </div>
     </nav>
