@@ -14,28 +14,37 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { LayoutDashboard, LogOut, User, Leaf } from 'lucide-react';
 import { placeholderImages } from "@/lib/placeholder-images.json";
+import { useRouter } from 'next/navigation';
 
 export function AuthButton() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const userAvatar = placeholderImages.find(p => p.id === "profile-avatar-1");
+  const router = useRouter();
 
   useEffect(() => {
-    // Check session storage on mount
+    // Check session storage on mount and update state
     const loggedInStatus = sessionStorage.getItem('isLoggedIn') === 'true';
-    if (loggedInStatus) {
-      setIsLoggedIn(true);
-    }
+    setIsLoggedIn(loggedInStatus);
   }, []);
 
   const handleLogin = () => {
     sessionStorage.setItem('isLoggedIn', 'true');
     setIsLoggedIn(true);
+    // Optionally redirect to dashboard or refresh
+    router.push('/dashboard');
   };
 
   const handleLogout = () => {
     sessionStorage.removeItem('isLoggedIn');
     setIsLoggedIn(false);
+    // Redirect to home page after logout
+    router.push('/');
   };
+
+  // The login button in the login page will call handleLogin
+  // For now, we simulate this with a direct login button for simplicity if not on a login page
+  const showLoginButton = typeof window !== 'undefined' && !window.location.pathname.includes('/login');
+
 
   if (isLoggedIn) {
     return (
@@ -84,7 +93,7 @@ export function AuthButton() {
 
   return (
     <div className="flex items-center gap-2">
-      <Button variant="ghost" onClick={handleLogin}>Login</Button>
+       {showLoginButton && <Button variant="ghost" asChild><Link href="/login">Login</Link></Button>}
       <Button asChild>
         <Link href="/register">Sign Up</Link>
       </Button>
