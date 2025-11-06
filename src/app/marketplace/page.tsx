@@ -26,7 +26,7 @@ const states = [
     { name: "RJ/Rio de Janeiro", seed: "rio" },
     { name: "SP/São Paulo", seed: "saopaulo" },
     { name: "MG/Minas Gerais", seed: "minasgerais" },
-    { name: "BA/Bahia", seed: "bahia" }, // Corrected from BH
+    { name: "BA/Bahia", seed: "bahia" },
     { name: "RS/Rio Grande do Sul", seed: "riograndedosul" },
     { name: "SC/Santa Catarina", seed: "santacatarina" },
     { name: "PR/Paraná", seed: "parana" },
@@ -72,15 +72,7 @@ export default function MarketplacePage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {states.map(state => (
                     <Card key={state.seed} className="overflow-hidden">
-                        <CardHeader>
-                            <div className="flex justify-between items-center">
-                                <CardTitle className="text-base font-medium">{state.name}</CardTitle>
-                                <Button variant="ghost" size="icon" className="w-6 h-6">
-                                    <Info className="h-4 w-4 text-muted-foreground" />
-                                </Button>
-                            </div>
-                        </CardHeader>
-                        <CardContent className="p-0 relative h-64">
+                        <div className="p-0 relative h-64">
                             <Image 
                                 src={`https://picsum.photos/seed/${state.seed}/600/400`}
                                 alt={`Mapa de ${state.name}`}
@@ -98,7 +90,7 @@ export default function MarketplacePage() {
                                     </Button>
                                 </div>
                             </div>
-                        </CardContent>
+                        </div>
                     </Card>
                 ))}
             </div>
