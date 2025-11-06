@@ -15,20 +15,20 @@ export function MainNav({
       <Logo />
       <div className="hidden md:flex items-center space-x-4 lg:space-x-6 ml-6">
         <Link
-          href="/projects"
-          className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
-        >
-          Projects
-        </Link>
-        <Link
           href="/marketplace"
           className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
         >
           Marketplace
         </Link>
         <Link
-          href="/dashboard"
+          href="/explore"
           className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+        >
+          Explore
+        </Link>
+        <Link
+          href="/dashboard"
+          className="text-sm font-menu font-medium text-muted-foreground transition-colors hover:text-primary"
         >
           Dashboard
         </Link>
