@@ -11,9 +11,10 @@ import {
     TabsList,
     TabsTrigger,
   } from "@/components/ui/tabs";
-import { DollarSign, TrendingUp, Info } from "lucide-react";
+import { DollarSign, Filter, Info, Map } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const stats = [
     { title: "Cadastrados", value: "R$ 0,00", change: "+0%" },
@@ -25,11 +26,15 @@ const states = [
     { name: "RJ/Rio de Janeiro", seed: "rio" },
     { name: "SP/São Paulo", seed: "saopaulo" },
     { name: "MG/Minas Gerais", seed: "minasgerais" },
-    { name: "BH/Bahia", seed: "bahia" },
+    { name: "BA/Bahia", seed: "bahia" }, // Corrected from BH
     { name: "RS/Rio Grande do Sul", seed: "riograndedosul" },
     { name: "SC/Santa Catarina", seed: "santacatarina" },
     { name: "PR/Paraná", seed: "parana" },
     { name: "MS/Mato Grosso do Sul", seed: "matogrossodosul" },
+    { name: "AM/Amazonas", seed: "amazonas" },
+    { name: "AC/Acre", seed: "acre" },
+    { name: "RO/Rondônia", seed: "rondonia" },
+    { name: "MT/Mato Grosso", seed: "matogrosso" },
 ]
 
 export default function MarketplacePage() {
@@ -70,7 +75,9 @@ export default function MarketplacePage() {
                         <CardHeader>
                             <div className="flex justify-between items-center">
                                 <CardTitle className="text-base font-medium">{state.name}</CardTitle>
-                                <Info className="h-4 w-4 text-muted-foreground" />
+                                <Button variant="ghost" size="icon" className="w-6 h-6">
+                                    <Info className="h-4 w-4 text-muted-foreground" />
+                                </Button>
                             </div>
                         </CardHeader>
                         <CardContent className="p-0 relative h-64">
@@ -81,13 +88,14 @@ export default function MarketplacePage() {
                                 className="object-cover"
                                 data-ai-hint="satellite map"
                             />
-                            <div className="absolute inset-0 bg-black/20 flex flex-col justify-end p-4">
-                                <div className="bg-background/80 backdrop-blur-sm p-2 rounded-md">
-                                    <h3 className="font-bold text-lg text-foreground">{state.name.split('/')[1]}</h3>
-                                    <div className="flex gap-2 mt-2">
-                                        <Button size="sm" variant="outline">Ver mapa ampliado</Button>
-                                        <Button size="sm">Ativos</Button>
-                                    </div>
+                            <div className="absolute top-4 left-4 bg-background/80 backdrop-blur-sm p-3 rounded-md shadow-lg">
+                                <h3 className="font-bold text-lg text-foreground">{state.name.split('/')[1]}</h3>
+                                <div className="flex gap-2 mt-2">
+                                    <Button size="sm" variant="link" className="p-0 h-auto text-primary">Ver mapa ampliado</Button>
+                                    <Button size="sm" variant="ghost" className="h-auto p-1">
+                                        <Filter className="h-4 w-4" />
+                                        <span className="ml-1">Notas</span>
+                                    </Button>
                                 </div>
                             </div>
                         </CardContent>
