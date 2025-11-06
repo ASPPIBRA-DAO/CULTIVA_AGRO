@@ -2,18 +2,12 @@
 import { PageHeader } from "@/components/page-header";
 import {
   Card,
-  CardContent,
 } from "@/components/ui/card";
-import {
-    Tabs,
-    TabsContent,
-    TabsList,
-    TabsTrigger,
-  } from "@/components/ui/tabs";
 import { DollarSign, Filter } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const stats = [
     { title: "Cadastrados", value: "R$ 0,00", change: "+0%" },
@@ -48,7 +42,7 @@ export default function MarketplacePage() {
         <div className="grid gap-6 md:grid-cols-3 mb-8">
             {stats.map(stat => (
                 <Card key={stat.title}>
-                    <CardContent className="p-6">
+                    <div className="p-6">
                         <div className="flex flex-row items-center justify-between space-y-0 pb-2">
                             <h3 className="text-sm font-medium">{stat.title}</h3>
                             <DollarSign className="h-4 w-4 text-muted-foreground" />
@@ -57,7 +51,7 @@ export default function MarketplacePage() {
                         <p className="text-xs text-muted-foreground text-green-500">
                         {stat.change}
                         </p>
-                    </CardContent>
+                    </div>
                 </Card>
             ))}
         </div>

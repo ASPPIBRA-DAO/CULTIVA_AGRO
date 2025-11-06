@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
@@ -16,9 +16,26 @@ import { LayoutDashboard, LogOut, User, Leaf } from 'lucide-react';
 import { placeholderImages } from "@/lib/placeholder-images.json";
 
 export function AuthButton() {
-  // This is a mock authentication state. In a real app, you'd use a context or session provider.
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const userAvatar = placeholderImages.find(p => p.id === "profile-avatar-1");
+
+  useEffect(() => {
+    // Check session storage on mount
+    const loggedInStatus = sessionStorage.getItem('isLoggedIn') === 'true';
+    if (loggedInStatus) {
+      setIsLoggedIn(true);
+    }
+  }, []);
+
+  const handleLogin = () => {
+    sessionStorage.setItem('isLoggedIn', 'true');
+    setIsLoggedIn(true);
+  };
+
+  const handleLogout = () => {
+    sessionStorage.removeItem('isLoggedIn');
+    setIsLoggedIn(false);
+  };
 
   if (isLoggedIn) {
     return (
@@ -56,7 +73,7 @@ export function AuthButton() {
             </Link>
           </DropdownMenuItem>
           <DropdownMenuSeparator />
-          <DropdownMenuItem onClick={() => setIsLoggedIn(false)}>
+          <DropdownMenuItem onClick={handleLogout}>
             <LogOut className="mr-2 h-4 w-4" />
             <span>Log out</span>
           </DropdownMenuItem>
@@ -67,8 +84,7 @@ export function AuthButton() {
 
   return (
     <div className="flex items-center gap-2">
-       {/* This button simulates login */}
-      <Button variant="ghost" onClick={() => setIsLoggedIn(true)}>Login</Button>
+      <Button variant="ghost" onClick={handleLogin}>Login</Button>
       <Button asChild>
         <Link href="/register">Sign Up</Link>
       </Button>
