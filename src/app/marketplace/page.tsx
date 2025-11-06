@@ -99,7 +99,7 @@ export default function MarketplacePage() {
                                 </div>
                             </div>
                         </CardContent>
-                    </Card>>
+                    </Card>
                 ))}
             </div>
         </TabsContent>
