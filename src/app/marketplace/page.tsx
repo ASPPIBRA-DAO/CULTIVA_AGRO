@@ -76,7 +76,7 @@ export default function MarketplacePage() {
                       />
                       <div className="absolute top-4 left-4 bg-background/80 backdrop-blur-sm p-3 rounded-md shadow-lg">
                         <h3 className="font-bold text-lg text-foreground">{state.name.split('/')[1]}</h3>
-                        <div className="flex gap-2 mt-2">
+                        <div className="flex flex-col items-start gap-2 mt-2">
                           <Button asChild size="sm" variant="link" className="p-0 h-auto text-primary">
                             <Link href="#">Ver mapa ampliado</Link>
                           </Button>

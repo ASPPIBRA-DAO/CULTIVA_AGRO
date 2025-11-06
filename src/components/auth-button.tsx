@@ -22,29 +22,29 @@ export function AuthButton() {
   const router = useRouter();
 
   useEffect(() => {
-    // Check session storage on mount and update state
-    const loggedInStatus = sessionStorage.getItem('isLoggedIn') === 'true';
-    setIsLoggedIn(loggedInStatus);
-  }, []);
+    // Check session storage on mount and whenever it changes
+    const checkLoginStatus = () => {
+      const loggedInStatus = sessionStorage.getItem('isLoggedIn') === 'true';
+      setIsLoggedIn(loggedInStatus);
+    };
 
-  const handleLogin = () => {
-    sessionStorage.setItem('isLoggedIn', 'true');
-    setIsLoggedIn(true);
-    // Optionally redirect to dashboard or refresh
-    router.push('/dashboard');
-  };
+    checkLoginStatus();
+
+    window.addEventListener('storage', checkLoginStatus);
+    return () => {
+      window.removeEventListener('storage', checkLoginStatus);
+    };
+  }, []);
 
   const handleLogout = () => {
     sessionStorage.removeItem('isLoggedIn');
     setIsLoggedIn(false);
-    // Redirect to home page after logout
+    // Manually trigger a storage event to update other tabs
+    window.dispatchEvent(new Event('storage'));
     router.push('/');
   };
-
-  // The login button in the login page will call handleLogin
-  // For now, we simulate this with a direct login button for simplicity if not on a login page
-  const showLoginButton = typeof window !== 'undefined' && !window.location.pathname.includes('/login');
-
+  
+  const showLoginButton = !isLoggedIn && (typeof window === 'undefined' || !window.location.pathname.includes('/login'));
 
   if (isLoggedIn) {
     return (
