@@ -34,7 +34,7 @@ const fazendaSolar: Company = {
     bio: "A Fazenda Solar é uma empresa familiar com 15 anos de experiência em agricultura orgânica. Nosso foco é a produção de soja e milho orgânico certificado, utilizando práticas sustentáveis que respeitam o meio ambiente e garantem a alta qualidade dos nossos produtos. Estamos comprometidos com a inovação e a expansão de nossas operações de forma responsável.",
     location: "Paraná, Brasil",
     foundedYear: 2009,
-    website: "www.fazendasolar.com.br"
+    website: "https://www.fazendasolar.com.br"
 }
 
 const cafeDasMontanhas: Company = {
@@ -44,7 +44,7 @@ const cafeDasMontanhas: Company = {
     bio: "Especialistas em cafés de alta pontuação, o Café das Montanhas controla todo o processo, da colheita à torra. Nossos grãos são cultivados nas altas altitudes de Minas Gerais, resultando em uma bebida com sabor e aroma únicos, reconhecida por compradores internacionais.",
     location: "Minas Gerais, Brasil",
     foundedYear: 2015,
-    website: "www.cafedasmontanhas.com"
+    website: "https://www.cafedasmontanhas.com"
 }
 
 const cacauBahia: Company = {
@@ -54,7 +54,7 @@ const cacauBahia: Company = {
     bio: "Somos uma startup de agronegócio focada na produção de cacau fino e sustentável no sul da Bahia. Buscamos parceiros para crescer e fornecer amêndoas de alta qualidade para o mercado de chocolates premium, gerando impacto social e ambiental positivo na região.",
     location: "Bahia, Brasil",
     foundedYear: 2020,
-    website: "www.cacaubahia.com"
+    website: "https://www.cacaubahia.com"
 }
 
 export const projects: Project[] = [
