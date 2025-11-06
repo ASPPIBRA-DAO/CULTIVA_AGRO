@@ -11,10 +11,9 @@ import {
     TabsList,
     TabsTrigger,
   } from "@/components/ui/tabs";
-import { DollarSign, Filter, Info, Map } from "lucide-react";
+import { DollarSign, Filter } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
 
 const stats = [
     { title: "Cadastrados", value: "R$ 0,00", change: "+0%" },
