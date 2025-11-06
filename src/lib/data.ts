@@ -57,6 +57,26 @@ const cacauBahia: Company = {
     website: "https://www.cacaubahia.com"
 }
 
+const agroInova: Company = {
+    id: "comp-004",
+    name: "AgroInova Tech",
+    logoId: "logo-agro-inova",
+    bio: "AgroInova Tech focuses on implementing technology in modern farming, from hydroponics to automated systems.",
+    location: "São Paulo, Brasil",
+    foundedYear: 2018,
+    website: "https://www.agroinovatech.com.br"
+}
+
+const novaTerra: Company = {
+    id: "comp-005",
+    name: "Nova Terra Investimentos",
+    logoId: "logo-nova-terra",
+    bio: "Nova Terra is an investment group focused on high-potential, high-risk agricultural ventures with a focus on new markets and experimental crops.",
+    location: "Rio de Janeiro, Brasil",
+    foundedYear: 2021,
+    website: "https://www.novaterrainvest.com"
+}
+
 export const projects: Project[] = [
   {
     id: "proj-001",
@@ -124,7 +144,7 @@ export const projects: Project[] = [
     riskLevel: "B",
     investmentType: "P2P Lending",
     guarantee: "CPR Física",
-    company: fazendaSolar, // Re-using for variety
+    company: fazendaSolar,
   },
   {
     id: "proj-005",
@@ -141,7 +161,7 @@ export const projects: Project[] = [
     riskLevel: "B",
     investmentType: "P2P Lending",
     guarantee: "Land Mortgage",
-    company: cafeDasMontanhas, // Re-using for variety
+    company: cafeDasMontanhas, 
   },
   {
     id: "proj-006",
@@ -158,8 +178,110 @@ export const projects: Project[] = [
     riskLevel: "C",
     investmentType: "Equity Crowdfunding",
     guarantee: "Company Shares",
-    company: cacauBahia, // Re-using for variety
+    company: cacauBahia,
   },
+  {
+    id: "proj-007",
+    title: "Organic Honey Production",
+    shortDescription: "Capital for scaling up an organic honey production operation.",
+    longDescription: "Funds will be used to purchase new beehives, extraction equipment, and for organic certification. The producer has a waiting list of local stores.",
+    cropType: "Honey",
+    imageId: "project-coffee",
+    targetAmount: 80000,
+    amountRaised: 25000,
+    daysLeft: 60,
+    targetROI: "19.5% p.a.",
+    term: "12 Months",
+    riskLevel: "A",
+    investmentType: "P2P Lending",
+    guarantee: "Harvest Alienation",
+    company: cafeDasMontanhas,
+  },
+  {
+    id: "proj-008",
+    title: "Free-Range Chicken Eggs",
+    shortDescription: "Working capital to expand a free-range egg production facility.",
+    longDescription: "Investment to increase flock size and automate the egg collection and packaging process. Strong local demand from restaurants and supermarkets.",
+    cropType: "Eggs",
+    imageId: "project-corn",
+    targetAmount: 120000,
+    amountRaised: 90000,
+    daysLeft: 30,
+    targetROI: "17.0% p.a.",
+    term: "18 Months",
+    riskLevel: "A",
+    investmentType: "P2P Lending",
+    guarantee: "CPR Física",
+    company: fazendaSolar,
+  },
+  {
+    id: "proj-009",
+    title: "Hydroponic Lettuce Farm",
+    shortDescription: "Funding to establish a new hydroponic lettuce farm near a major urban center.",
+    longDescription: "This project will build a new facility to grow lettuce hydroponically, providing fresh, local produce year-round. Off-take agreements with local grocery chains are already in negotiation.",
+    cropType: "Lettuce",
+    imageId: "project-soybean",
+    targetAmount: 250000,
+    amountRaised: 100000,
+    daysLeft: 50,
+    targetROI: "18.5% p.a.",
+    term: "20 Months",
+    riskLevel: "A",
+    investmentType: "P2P Lending",
+    guarantee: "Land Mortgage",
+    company: agroInova,
+  },
+  {
+    id: "proj-010",
+    title: "Mango Orchard Expansion",
+    shortDescription: "Financing to expand an existing mango orchard and improve packing facilities.",
+    longDescription: "The producer aims to plant 30 more hectares of the 'Tommy Atkins' mango variety and upgrade the packing house to meet export standards. The farm has been exporting successfully for 5 years.",
+    cropType: "Mango",
+    imageId: "project-avocado",
+    targetAmount: 500000,
+    amountRaised: 150000,
+    daysLeft: 70,
+    targetROI: "15.0% p.a.",
+    term: "28 Months",
+    riskLevel: "B",
+    investmentType: "P2P Lending",
+    guarantee: "CPR Física",
+    company: fazendaSolar,
+  },
+  {
+    id: "proj-011",
+    title: "Tropical Vanilla Cultivation",
+    shortDescription: "Equity investment in a startup cultivating high-value vanilla in a controlled environment.",
+    longDescription: "This is an equity crowdfunding opportunity to invest in a high-tech project growing vanilla in a greenhouse, a high-value spice with huge market demand. The team includes agronomists specialized in vanilla.",
+    cropType: "Vanilla",
+    imageId: "project-grapes",
+    targetAmount: 1500000,
+    amountRaised: 300000,
+    daysLeft: 90,
+    targetROI: "28.0% (proj.)",
+    term: "50+ Months",
+    riskLevel: "C",
+    investmentType: "Equity Crowdfunding",
+    guarantee: "Company Shares",
+    company: novaTerra,
+  },
+  {
+    id: "proj-012",
+    title: "Aquaponic Tilapia Farm",
+    shortDescription: "Investment to build a large-scale commercial aquaponic system for tilapia and vegetable production.",
+    longDescription: "Seeking partners for a large-scale aquaponic farm. This is a high-risk, high-reward project aiming to create a sustainable and highly productive food system. The business plan is solid, but the technology is new to the region.",
+    cropType: "Tilapia",
+    imageId: "project-cocoa",
+    targetAmount: 2000000,
+    amountRaised: 250000,
+    daysLeft: 120,
+    targetROI: "30.0% (proj.)",
+    term: "60+ Months",
+    riskLevel: "C",
+    investmentType: "Equity Crowdfunding",
+    guarantee: "Company Shares",
+    company: novaTerra,
+  }
 ];
 
 export const portfolioSummary = {
@@ -200,6 +322,6 @@ export const myInvestments = [
 
 // Function to get a company by its ID
 export function getCompanyById(id: string) {
-    const allCompanies = [fazendaSolar, cafeDasMontanhas, cacauBahia];
+    const allCompanies = [fazendaSolar, cafeDasMontanhas, cacauBahia, agroInova, novaTerra];
     return allCompanies.find(c => c.id === id);
 }
